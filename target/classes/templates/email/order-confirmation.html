@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .content {
+            padding: 20px 0;
+        }
+        .order-number {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>CRUD Store</h2>
+        </div>
+        
+        <div class="content">
+            <p>Hello <span th:text="${name}">User</span>,</p>
+            
+            <p>Thank you for your order! We're pleased to confirm that we've received your order and it's being processed.</p>
+            
+            <p class="order-number">Order Number: <span th:text="${'#' + orderId}">Order ID</span></p>
+            
+            <p>You can track your order status by clicking the button below:</p>
+            
+            <a href="#" class="button">Track Your Order</a>
+            
+            <p>If you have any questions about your order, please contact our customer service team.</p>
+            
+            <p>Best regards,<br>CRUD Store Team</p>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 CRUD Store. All rights reserved.</p>
+            <p>This is an automated email, please do not reply.</p>
+        </div>
+    </div>
+</body>
+</html>
